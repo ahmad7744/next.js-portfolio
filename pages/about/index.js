@@ -204,26 +204,26 @@ const About = () => {
           className="flex flex-col w-full xl:max-w-[48%] h-[480px] "
         >
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4 ">
-            {aboutData.map((item, itmeIndex1) => {
+            {aboutData.map((item1, itemIndex1) => {
               return (
                 <div
-                  key={itmeIndex1}
+                  key={itemIndex1}
                   className={` ${
-                    index === itmeIndex1 &&
+                    index === itemIndex1 &&
                     "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300 "
                   } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px]  after:bg-white after:absolute after:-bottom-1 after:left-0`}
-                  onClick={() => setIndex(itmeIndex1)}
+                  onClick={() => setIndex(itemIndex1)}
                 >
-                  {item.title}
+                  {item1.title}
                 </div>
               );
             })}
           </div>
           <div className=" py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start  ">
-            {aboutData[index].info.map((item, itmeIndex) => {
+            {aboutData[index].info.map((item, itemIndex) => {
               return (
                 <div
-                  key={itmeIndex}
+                  key={itemIndex}
                   className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
                 >
                   {/* title */}
@@ -232,8 +232,10 @@ const About = () => {
                   <div>{}</div>
                   {/* icons */}
                   <div className="flex gap-x-4">
-                    {item.icons?.map((icon, itmeIndex) => {
-                      return <div className="text-2xl text-white ">{icon}</div>;
+                    {item.icons?.map((icon, iconIndex) => {
+                      return <div 
+                      key={iconIndex}
+                      className="text-2xl text-white ">{icon}</div>;
                     })}
                   </div>
                 </div>
