@@ -41,12 +41,12 @@ export const aboutData = [
     title: "awards",
     info: [
       {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
+        title: "Webby Awards  Honoree",
+        stage: "2011  2012",
       },
       {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
+        title: "Adobe Design Achievement Awards  Finalist",
+        stage: "2009  2010",
       },
     ],
   },
@@ -129,7 +129,7 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-           className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 ">03 Years ago, I began freelancing as a Graphic Designer and Web Developer . Since then, I've done 
+           className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 ">03 Years ago, I began freelancing as a Graphic Designer and Web Developer . Since then, I have done 
             remote work for agecies, counsulted for startups, and collaborated on digital products for business and counsumer use. </motion.p>
             {/* counters  */}
             <motion.div
@@ -172,7 +172,7 @@ const About = () => {
 
         </div>
         {/* info */}
-        <motion.div
+         <motion.div
         variants={fadeIn ('left' , 0.4)}
         initial="hidden"
         animate="show"
@@ -192,27 +192,28 @@ const About = () => {
             })}
           </div>
           <div className=" py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start  ">
-      {aboutData[index].info.map((item, itemIndex) => {
-        return (
-          <div key={itemIndex} className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60">
-            {/* title */}
-            <div className="font-light mb-2 md:mb-0 ">{item.title}</div>
-            <div className="hidden md:flex ">-</div>
-            <div>{item.stage}</div>
-            {/* icons */}
-            <div className="flex gap-x-4">
-              {item.icons?.map((icon, iconIndex) => {
-                return (
-                  <div key={iconIndex} className="text-2xl text-white ">
-                    {icon}
-                  </div>
-                );
-              })}
-            </div>
+            {aboutData[index].info.map((item, itmeIndex)=>{
+              return <div key={itmeIndex}
+              className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60">
+                {/* title */}
+                <div className="font-light mb-2 md:mb-0 ">{item.title}</div>
+                <div className="hidden md:flex ">-</div>
+                <div>{item.stage}</div>
+                {/* icons */}
+                <div className="flex gap-x-4">
+                  {item.icons?.map ((icon, itmeIndex)=>{
+                    return <div className="text-2xl text-white ">{icon}</div>;
+                  })}
+
+                </div>
+
+
+
+                </div>
+
+            })}
+
           </div>
-        );
-      })}
-    </div>
         </motion.div>
       </div>
     </div>
