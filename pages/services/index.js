@@ -18,11 +18,15 @@ import { fadeIn } from '../../variants';
 
 
 const Services = () => {
-  return <div>
+  return(
+    <div className='h' >
     <Circles/>
    <div className='container mx-auto'></div> 
+   <Blub/>
    
-  </div>;
+  </div>
+
+  );
 };
 
 export default Services;
